@@ -1,0 +1,45 @@
+.top-row{ max-width:1100px; margin: 10px auto 0; padding: 0 20px }
+.back-link{ color:#374151; text-decoration:none; font-weight:600; display:inline-flex; align-items:center; gap:8px }
+.back-icon{ font-size:18px; color:#374151 }
+
+.course-hero{ padding: 32px 20px; color: #fff; border-radius:6px 6px 0 0 }
+.hero-inner{ max-width:1100px; margin:0 auto; display:flex; gap:24px; align-items:center; }
+.hero-text{ flex:1 }
+.hero-category{ font-size:12px; opacity:0.95; margin-bottom:8px }
+.hero-title{ font-size:34px; margin:0 0 12px }
+.hero-sub{ opacity:0.95; max-width:700px; }
+.hero-meta{ margin-top:12px; display:flex; gap:16px; color:rgba(255,255,255,0.95) }
+.hero-meta .meta-item{ display:inline-flex; align-items:center; gap:8px; margin-right:18px }
+.hero-meta .meta-icon{ font-size:18px; color:rgba(255,255,255,0.95) }
+.hero-image img{ width:240px; height:140px; object-fit:cover; border-radius:8px }
+
+.course-content{ max-width:1100px; margin:18px auto; display:flex; gap:24px; padding: 0 20px 40px }
+.main-col{ flex:1 }
+.side-col{ width:340px }
+.card{ background:#fff; padding:22px; border-radius:10px; margin-bottom:18px; box-shadow: 0 6px 20px rgba(2,6,23,0.06); }
+.card h3{ margin-top:0 }
+
+.learn-card .skills-list{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; list-style:none; padding:0; margin:10px 0 0 }
+.skills-list li{ display:flex; align-items:center; gap:10px; padding-left:0; color:#111827 }
+.skill-icon{ background:#ecfdf5; color:#10b981; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:6px; font-size:16px }
+
+.desc-card p{ color:#374151; line-height:1.6 }
+
+.instr-body{ display:flex; gap:12px; align-items:center }
+.instr-avatar{ width:48px; height:48px; border-radius:24px; background:#ff7a00; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700 }
+.instr-sub{ margin:6px 0 0; color:#6b7280 }
+
+.enroll-box .primary{ display:block; width:100%; padding:12px; background:#ff6b1a; color:#fff; border:none; border-radius:8px; margin-top:12px; font-weight:700 }
+.enroll-box .ghost{ display:block; width:100%; padding:10px; background:#fff; color:#ff6b1a; border:1px solid #ff6b1a; border-radius:8px; margin-top:8px }
+.enroll-box .muted{ color:#6b7280; font-size:13px }
+
+.includes{ margin-top:16px }
+.includes h5{ margin:10px 0 8px }
+.includes ul{ list-style:none; padding:0; margin:0 }
+.includes li{ padding:6px 0; color:#374151 }
+
+@media (max-width:900px){
+  .hero-inner{ flex-direction:column; }
+  .course-content{ flex-direction:column; }
+  .side-col{ width:100% }
+}

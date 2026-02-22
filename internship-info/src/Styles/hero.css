@@ -1,0 +1,37 @@
+.hero {
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px 108px; /* larger bottom padding so search bar overlaps */
+  background: linear-gradient(90deg, #F54900 0%, #FF6900 100%);
+}
+
+.hero h1 {
+  margin: 0 0 12px 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.hero-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+  color: #FFEDD4;
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
