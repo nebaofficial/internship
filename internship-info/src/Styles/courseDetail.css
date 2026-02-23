@@ -1,39 +1,233 @@
-.top-row{ max-width:1100px; margin: 10px auto 0; padding: 0 20px }
-.back-link{ color:#374151; text-decoration:none; font-weight:600; display:inline-flex; align-items:center; gap:8px }
-.back-icon{ font-size:18px; color:#374151 }
+.top-row {
+  max-width: 1100px;
+  margin: 10px auto 0;
+  padding: 0 20px;
+}
+.back-link {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.back-icon {
+  font-size: 18px;
+  color: #374151;
+}
 
-.course-hero{ padding: 32px 20px; color: #fff; border-radius:6px 6px 0 0 }
-.hero-inner{ max-width:1100px; margin:0 auto; display:flex; gap:24px; align-items:center; }
-.hero-text{ flex:1 }
-.hero-category{ font-size:12px; opacity:0.95; margin-bottom:8px }
-.hero-title{ font-size:34px; margin:0 0 12px }
-.hero-sub{ opacity:0.95; max-width:700px; }
-.level-row{ margin-top:12px }
-.level-badge{ display:inline-block; background:#e6f2ff; color:#2563eb; padding:8px 16px; border-radius:999px; font-size:14px; font-weight:600 }
-.level-below-instructor{ margin-top:10px }
-.hero-meta{ margin-top:12px; display:flex; gap:16px; color:rgba(255,255,255,0.95); align-items:center }
-.instructor-item{ display:inline-flex; align-items:center; gap:8px }
-.instructor-icon{ font-size:18px }
-.instructor-label{ display:inline-block }
-.hero-meta .meta-item{ display:inline-flex; align-items:center; gap:8px; margin-right:18px }
-.hero-meta .meta-icon{ font-size:18px; color:rgba(255,255,255,0.95) }
-.hero-image img{ width:240px; height:140px; object-fit:cover; border-radius:8px }
+.course-hero {
+  padding: 32px 20px;
+  color: #fff;
+  border-radius: 6px 6px 0 0;
+}
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.hero-text {
+  flex: 1;
+}
+.hero-category {
+  font-size: 12px;
+  opacity: 0.95;
+  margin-bottom: 8px;
+}
+.hero-title {
+  font-size: 34px;
+  margin: 0 0 12px;
+}
+.hero-sub {
+  opacity: 0.95;
+  max-width: 700px;
+}
+.level-row {
+  margin-top: 12px;
+}
+.level-badge {
+  display: inline-block;
+  background: #e6f2ff;
+  color: #2563eb;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.level-below-instructor {
+  margin-top: 10px;
+}
+.hero-meta {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.95);
+  align-items: center;
+}
+.course-hero .hero-category,
+.course-hero .hero-title,
+.course-hero .hero-sub,
+.course-hero .hero-meta,
+.course-hero .instructor-label {
+  color: #fff;
+}
+.hero-meta .meta-item span {
+  color: #fff;
+}
 
-.course-content{ max-width:1100px; margin:18px auto; display:flex; gap:24px; padding: 0 20px 40px }
-.main-col{ flex:1 }
-.side-col{ width:340px }
-.card{ background:#fff; padding:22px; border-radius:10px; margin-bottom:18px; box-shadow: 0 6px 20px rgba(2,6,23,0.06); }
-.card h3{ margin-top:0 }
+/* Adjust hero subtitle typography and use the provided cream color */
+.course-hero .hero-sub {
+  color: #ffedd4;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+  max-width: 700px;
+}
 
-.learn-card .skills-list{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; list-style:none; padding:0; margin:10px 0 0 }
-.skills-list li{ display:flex; align-items:center; gap:10px; padding-left:0; color:#111827 }
-.skill-icon{ background:#ecfdf5; color:#10b981; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:6px; font-size:16px }
+/* make some supporting header text match the cream tone */
+.course-hero .hero-category,
+.course-hero .instructor-label,
+.hero-meta .meta-item span {
+  color: #ffedd4;
+}
+.instructor-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.instructor-icon {
+  font-size: 18px;
+}
+.instructor-label {
+  display: inline-block;
+}
+.hero-meta .meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 18px;
+}
+.hero-meta .meta-icon {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+}
+.hero-meta .meta-item .meta-icon.star {
+  font-size: 48px;
+  margin-right: 6px;
+}
 
-.learn-card h3{ display:inline-flex; align-items:center; gap:10px; font-size:18px }
-.learn-icon{ font-size:20px }
+/* Ensure the star icon uses the exact provided yellow (#FFDF20) */
+.hero-meta .meta-item .meta-icon.star,
+.hero-meta .meta-item .meta-icon.star svg,
+.hero-meta .meta-item .meta-icon.star path {
+  color: #ffdf20 !important;
+  fill: #ffdf20 !important;
+}
 
-.desc-card p{
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+/* Rating styles: large numeric rating and white text, matching design */
+.rating {
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.rating-number {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  font-weight: 400;
+}
+.hero-image img {
+  width: 240px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.course-content {
+  max-width: 1100px;
+  margin: 18px auto;
+  display: flex;
+  gap: 24px;
+  padding: 0 20px 40px;
+}
+.main-col {
+  flex: 1;
+}
+.side-col {
+  width: 340px;
+}
+.card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
+}
+.card h3 {
+  margin-top: 0;
+}
+
+.learn-card .skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+  color: #111827;
+}
+.skill-icon {
+  background: #ecfdf5;
+  color: #10b981;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.learn-card h3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+.learn-icon {
+  font-size: 20px;
+}
+
+.desc-card p {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
@@ -44,57 +238,136 @@
   margin-top: -0.5px;
 }
 
-.instr-body{ display:flex; gap:12px; align-items:center }
-.instr-avatar{
-  min-width:64px;
-  min-height:64px;
-  padding:8px;
-  border-radius:50%;
-  background: #ff7a00;
-  color:#ffffff;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-  position:relative;
-  font-size:18px;
+.instr-body {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.instr-avatar {
+  min-width: 64px;
+  min-height: 64px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #f54900;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  position: relative;
+  font-size: 18px;
   box-sizing: content-box;
 }
-.avatar-badge{ display:none }
-.avatar-badge-icon{ font-size:16px }
-.instr-sub{ margin:6px 0 0; color:#6b7280 }
+.avatar-badge {
+  display: none;
+}
+.avatar-badge-icon {
+  font-size: 16px;
+}
+.instr-sub {
+  margin: 6px 0 0;
+  color: #6b7280;
+}
 
-.enroll-box .primary{ display:block; width:100%; padding:12px; background:#ff6b1a; color:#fff; border:none; border-radius:8px; margin-top:12px; font-weight:700 }
-.enroll-box .ghost{ display:block; width:100%; padding:10px; background:#fff; color:#ff6b1a; border:1px solid #ff6b1a; border-radius:8px; margin-top:8px }
-.enroll-box .muted{ color:#6b7280; font-size:13px }
+.enroll-box .primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #f54900;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-weight: 700;
+}
+.enroll-box .ghost {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  color: #f54900;
+  border: 1px solid #f54900;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.enroll-box .muted {
+  color: #6b7280;
+  font-size: 13px;
+}
 
-.includes{ margin-top:16px }
-.includes h5{ margin:10px 0 8px }
-.includes ul{ list-style:none; padding:0; margin:0 }
-.includes li{ padding:6px 0; color:#374151; display:flex; align-items:center; gap:8px }
-.include-icon{ color:#10b981; font-size:18px; display:inline-flex; align-items:center }
+.includes {
+  margin-top: 16px;
+}
+.includes h5 {
+  margin: 10px 0 8px;
+}
+.includes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.includes li {
+  padding: 6px 0;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.include-icon {
+  color: #10b981;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+}
 
 /* Enroll box precise sizing and shadows to match design */
-.enroll-box{
+.enroll-box {
   width: 324.34px;
   padding: 20px 22px;
   border-radius: 10px;
   background: #ffffff;
-  box-shadow: 0 2px 4px -2px rgba(0,0,0,0.10), 0 4px 6px -1px rgba(0,0,0,0.10);
+  box-shadow:
+    0 2px 4px -2px rgba(0, 0, 0, 0.1),
+    0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.enroll-box h4{ font-size:20px; margin:0 0 6px; font-weight:700 }
-.enroll-box .muted{ margin-top:6px; color:#6b7280; font-size:13px }
+.enroll-box h4 {
+  font-size: 20px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+.enroll-box .muted {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+}
 
-.enroll-box .primary{ padding:12px; border-radius:8px; font-weight:700 }
-.enroll-box .ghost{ padding:10px; border-radius:8px }
+.enroll-box .primary {
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.enroll-box .ghost {
+  padding: 10px;
+  border-radius: 8px;
+}
 
 /* spacing inside the enroll box */
-.enroll-box .includes{ margin-top:18px }
-.enroll-box .includes h5{ margin-bottom:10px }
+.enroll-box .includes {
+  margin-top: 18px;
+}
+.enroll-box .includes h5 {
+  margin-bottom: 10px;
+}
 
-@media (max-width:900px){
-  .hero-inner{ flex-direction:column; }
-  .course-content{ flex-direction:column; }
-  .side-col{ width:100% }
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+  .course-content {
+    flex-direction: column;
+  }
+  .side-col {
+    width: 100%;
+  }
 }

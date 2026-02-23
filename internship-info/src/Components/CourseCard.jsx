@@ -1,10 +1,10 @@
-import React from 'react'
-import '../Styles/courseCard.css'
-import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import GroupIcon from '@mui/icons-material/Group'
-import StarIcon from '@mui/icons-material/Star'
-import { sampleCourses } from './Catagory/Catagory'
-import { Link } from 'react-router-dom'
+import React from "react";
+import "../Styles/courseCard.css";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import GroupIcon from "@mui/icons-material/Group";
+import StarIcon from "@mui/icons-material/Star";
+import { sampleCourses } from "./Catagory/Catagory";
+import { Link } from "react-router-dom";
 
 // const sampleCourses = [
 //   {
@@ -99,51 +99,69 @@ import { Link } from 'react-router-dom'
 
 function CourseCard() {
   return (
-    <section className='courses-section'>
-      <div className='showing'>
-        <p>Showing {sampleCourses.length} of {sampleCourses.length} courses</p>
+    <section className="courses-section">
+      <div className="showing">
+        <p>
+          Showing {sampleCourses.length} of {sampleCourses.length} courses
+        </p>
       </div>
 
-      <div className='courses-grid'>
-        {sampleCourses.map(course => (
-          <Link to={`/courses/${course.id}`} key={course.id} className='course-link'>
-            <article className='course-card'>
-            <div className='card-image-wrap'>
-              <img src={course.thumbnail} alt={course.title} className='course-image' />
-              <span className={`level-chip level-${course.level.toLowerCase()}`}>{course.level}</span>
-            </div>
-
-            <div className='card-body'>
-              <div className='course-category'>{course.category}</div>
-              <h3 className='course-title'>{course.title}</h3>
-              <div className='course-instructor'>Instructor: {course.instructor}</div>
-            </div>
-
-            <div className='card-footer'>
-              <div className='meta'>
-                <span className='meta-item'>
-                  <AccessTimeIcon className="meta-icon" />
-                  <span className='meta-text'>{course.duration}</span>
-                </span>
-                <span className='meta-item'>
-                  <GroupIcon className="meta-icon" />
-                  <span className='meta-text'>{course.enrolled.toLocaleString()}</span>
+      <div className="courses-grid">
+        {sampleCourses.map((course) => (
+          <Link
+            to={`/courses/${course.id}`}
+            key={course.id}
+            className="course-link"
+          >
+            <article className="course-card">
+              <div className="card-image-wrap">
+                <img
+                  src={course.thumbnail}
+                  alt={course.title}
+                  className="course-image"
+                />
+                <span
+                  className={`level-chip level-${course.level.toLowerCase()}`}
+                >
+                  {course.level}
                 </span>
               </div>
 
-              <div className='rating'>
-                <div className='star-img-wrapper'>
-                  <StarIcon className='star-icon' />
+              <div className="card-body">
+                <div className="course-category">{course.category}</div>
+                <h3 className="course-title">{course.title}</h3>
+                <div className="course-instructor">
+                  Instructor: {course.instructor}
                 </div>
-                <span className='rating-value'>{course.rating}</span>
               </div>
-            </div>
+
+              <div className="card-footer">
+                <div className="meta">
+                  <span className="meta-item">
+                    <AccessTimeIcon className="meta-icon" />
+                    <span className="meta-text">{course.duration}</span>
+                  </span>
+                  <span className="meta-item">
+                    <GroupIcon className="meta-icon" />
+                    <span className="meta-text">
+                      {course.enrolled.toLocaleString()}
+                    </span>
+                  </span>
+                </div>
+
+                <div className="rating">
+                  <div className="star-img-wrapper">
+                    <StarIcon className="star-icon" />
+                  </div>
+                  <span className="rating-value">{course.rating}</span>
+                </div>
+              </div>
             </article>
           </Link>
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default CourseCard
+export default CourseCard;

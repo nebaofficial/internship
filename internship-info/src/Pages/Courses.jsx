@@ -1,7 +1,7 @@
-import React from 'react'
-import Hero from '../Components/Hero'
-import SearchBar from '../Components/SearchBar'
-import CourseCard from '../Components/CourseCard'
+import React from "react";
+import Hero from "../Components/Hero";
+import SearchBar from "../Components/SearchBar";
+import CourseCard from "../Components/CourseCard";
 
 function Courses() {
   return (
@@ -10,7 +10,7 @@ function Courses() {
       <SearchBar />
       <CourseCard />
     </main>
-  )
+  );
 }
 
-export default Courses
+export default Courses;
