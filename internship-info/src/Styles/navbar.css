@@ -65,3 +65,6 @@ list-style: none;
 text-decoration: none;
 
 }
+
+.logo-link{ display:inline-flex; align-items:center }
+.site-logo{ height:40px; width:auto; display:block }

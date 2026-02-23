@@ -4,8 +4,10 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import GroupIcon from '@mui/icons-material/Group'
 import PersonIcon from '@mui/icons-material/Person'
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium'
+import MenuBookTwoToneIcon from '@mui/icons-material/MenuBookTwoTone'
 import StarIcon from '@mui/icons-material/Star'
-import CheckCircleIcon from '@mui/icons-material/CheckCircle'
+import TaskAltIcon from '@mui/icons-material/TaskAlt'
 import { sampleCourses } from '../Components/Catagory/Catagory'
 import '../Styles/courseDetail.css'
 
@@ -27,9 +29,9 @@ function CourseDetail(){
             <h1 className='hero-title'>{course.title}</h1>
             <p className='hero-sub'>{course.description}</p>
             <div className='hero-meta'>
-              <span className='meta-item'>
-                <PersonIcon className='meta-icon' />
-                <span>Instructor: <strong>{course.instructor}</strong></span>
+              <span className='meta-item instructor-item'>
+                <WorkspacePremiumIcon className='instructor-icon' htmlColor="#fff" />
+                <span className='instructor-label'>Instructor: <strong>{course.instructor}</strong></span>
               </span>
 
               <span className='meta-item'>
@@ -47,6 +49,9 @@ function CourseDetail(){
                 <span>{course.rating} rating</span>
               </span>
             </div>
+            <div className='level-row level-below-instructor'>
+              <span className='level-badge'>{course.level || 'Intermediate Level'}</span>
+            </div>
           </div>
           <div className='hero-image'>
             <img src={course.thumbnail} alt={course.title} />
@@ -57,11 +62,14 @@ function CourseDetail(){
       <div className='course-content'>
         <section className='main-col'>
           <div className='card learn-card'>
-            <h3>What You'll Learn</h3>
+            <h3>
+              <MenuBookTwoToneIcon className='learn-icon' htmlColor="#F54900" />
+              What You'll Learn
+            </h3>
             <ul className='skills-list'>
               {course.skills && course.skills.map(s => (
                 <li key={s}>
-                  <CheckCircleIcon className='skill-icon' fontSize='small' htmlColor="#10b981" />
+                  <TaskAltIcon className='skill-icon' fontSize='small' htmlColor="#10b981" />
                   <span>{s}</span>
                 </li>
               ))}
@@ -95,11 +103,11 @@ function CourseDetail(){
             <div className='includes'>
               <h5>This course includes:</h5>
               <ul>
-                <li>9 weeks of content</li>
-                <li>Lifetime access</li>
-                <li>Certificate of completion</li>
-                <li>Access on mobile and desktop</li>
-                <li>Downloadable resources</li>
+                <li><TaskAltIcon className='include-icon' fontSize='small' htmlColor="#10b981" />9 weeks of content</li>
+                <li><TaskAltIcon className='include-icon' fontSize='small' htmlColor="#10b981" />Lifetime access</li>
+                <li><TaskAltIcon className='include-icon' fontSize='small' htmlColor="#10b981" />Certificate of completion</li>
+                <li><TaskAltIcon className='include-icon' fontSize='small' htmlColor="#10b981" />Access on mobile and desktop</li>
+                <li><TaskAltIcon className='include-icon' fontSize='small' htmlColor="#10b981" />Downloadable resources</li>
               </ul>
             </div>
           </div>

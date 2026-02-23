@@ -8,7 +8,13 @@
 .hero-category{ font-size:12px; opacity:0.95; margin-bottom:8px }
 .hero-title{ font-size:34px; margin:0 0 12px }
 .hero-sub{ opacity:0.95; max-width:700px; }
-.hero-meta{ margin-top:12px; display:flex; gap:16px; color:rgba(255,255,255,0.95) }
+.level-row{ margin-top:12px }
+.level-badge{ display:inline-block; background:#e6f2ff; color:#2563eb; padding:8px 16px; border-radius:999px; font-size:14px; font-weight:600 }
+.level-below-instructor{ margin-top:10px }
+.hero-meta{ margin-top:12px; display:flex; gap:16px; color:rgba(255,255,255,0.95); align-items:center }
+.instructor-item{ display:inline-flex; align-items:center; gap:8px }
+.instructor-icon{ font-size:18px }
+.instructor-label{ display:inline-block }
 .hero-meta .meta-item{ display:inline-flex; align-items:center; gap:8px; margin-right:18px }
 .hero-meta .meta-icon{ font-size:18px; color:rgba(255,255,255,0.95) }
 .hero-image img{ width:240px; height:140px; object-fit:cover; border-radius:8px }
@@ -23,10 +29,39 @@
 .skills-list li{ display:flex; align-items:center; gap:10px; padding-left:0; color:#111827 }
 .skill-icon{ background:#ecfdf5; color:#10b981; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:6px; font-size:16px }
 
-.desc-card p{ color:#374151; line-height:1.6 }
+.learn-card h3{ display:inline-flex; align-items:center; gap:10px; font-size:18px }
+.learn-icon{ font-size:20px }
+
+.desc-card p{
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.31px;
+  color: #364153;
+  max-width: 610px;
+  min-height: 78px;
+  margin-top: -0.5px;
+}
 
 .instr-body{ display:flex; gap:12px; align-items:center }
-.instr-avatar{ width:48px; height:48px; border-radius:24px; background:#ff7a00; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700 }
+.instr-avatar{
+  min-width:64px;
+  min-height:64px;
+  padding:8px;
+  border-radius:50%;
+  background: #ff7a00;
+  color:#ffffff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  position:relative;
+  font-size:18px;
+  box-sizing: content-box;
+}
+.avatar-badge{ display:none }
+.avatar-badge-icon{ font-size:16px }
 .instr-sub{ margin:6px 0 0; color:#6b7280 }
 
 .enroll-box .primary{ display:block; width:100%; padding:12px; background:#ff6b1a; color:#fff; border:none; border-radius:8px; margin-top:12px; font-weight:700 }
@@ -36,7 +71,27 @@
 .includes{ margin-top:16px }
 .includes h5{ margin:10px 0 8px }
 .includes ul{ list-style:none; padding:0; margin:0 }
-.includes li{ padding:6px 0; color:#374151 }
+.includes li{ padding:6px 0; color:#374151; display:flex; align-items:center; gap:8px }
+.include-icon{ color:#10b981; font-size:18px; display:inline-flex; align-items:center }
+
+/* Enroll box precise sizing and shadows to match design */
+.enroll-box{
+  width: 324.34px;
+  padding: 20px 22px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px -2px rgba(0,0,0,0.10), 0 4px 6px -1px rgba(0,0,0,0.10);
+}
+
+.enroll-box h4{ font-size:20px; margin:0 0 6px; font-weight:700 }
+.enroll-box .muted{ margin-top:6px; color:#6b7280; font-size:13px }
+
+.enroll-box .primary{ padding:12px; border-radius:8px; font-weight:700 }
+.enroll-box .ghost{ padding:10px; border-radius:8px }
+
+/* spacing inside the enroll box */
+.enroll-box .includes{ margin-top:18px }
+.enroll-box .includes h5{ margin-bottom:10px }
 
 @media (max-width:900px){
   .hero-inner{ flex-direction:column; }

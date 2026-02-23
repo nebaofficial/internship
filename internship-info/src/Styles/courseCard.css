@@ -117,18 +117,35 @@
 
 .meta-text { font-size: 12px; color: #6b7280; }
 
-.rating { display: flex; align-items:center; gap:8px; color:#f59e0b; font-weight:600 }
+.rating { display: flex; align-items:center; gap:12px; color:#f59e0b; font-weight:600 }
 
-.star {
+.star-icon {
+  font-size: 13.33px; /* matches provided width/height scale */
+  color: #F0B100; /* star color from design */
+  fill: currentColor; /* ensure SVG path uses the color as a solid fill */
+  -webkit-text-fill-color: currentColor;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Background wrapper to mimic provided design: small box with 1.33px border */
+.rating .star-img-wrapper {
+  width: 22px; /* small badge to closely match the design */
+  height: 22px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
-  background: #FFF4E6;
-  color: #f59e0b;
-  font-size: 14px;
+  border-radius: 4px;
+  background: transparent; /* remove background so only star shows */
+  padding: 0;
+}
+
+/* Make the numeric rating large and dark like the provided design */
+.rating .rating-value {
+  color: #364153; /* dark slate color matching image */
+  font-size: 14px; /* large number like the design */
+  font-weight: 400;
+  line-height: 1;
 }
 
 @media (max-width: 1000px) {
@@ -140,4 +157,7 @@
   .course-image { height: 180px; }
 }
 
-.course-link{ display:block; color:inherit; text-decoration:none }
+.course-link{ display:block; color:inherit; text-decoration:none; height:100%; }
+
+/* Ensure card fills the grid cell so all cards in a row have equal height */
+.course-link > .course-card { height:100%; display:flex; flex-direction:column; }

@@ -2,6 +2,7 @@ import React from 'react'
 import '../Styles/courseCard.css'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import GroupIcon from '@mui/icons-material/Group'
+import StarIcon from '@mui/icons-material/Star'
 import { sampleCourses } from './Catagory/Catagory'
 import { Link } from 'react-router-dom'
 
@@ -131,7 +132,9 @@ function CourseCard() {
               </div>
 
               <div className='rating'>
-                <span className='star'>★</span>
+                <div className='star-img-wrapper'>
+                  <StarIcon className='star-icon' />
+                </div>
                 <span className='rating-value'>{course.rating}</span>
               </div>
             </div>
